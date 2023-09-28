@@ -5,9 +5,9 @@ export function load() {
 	console.log("trigerr load");
 	container.innerHTML = "";
 	database.forEach((element) => {
-		const { name, urlImage } = element;
+		const { id, name, urlImage } = element;
 
-		container.innerHTML += `<div class="box">
+		container.innerHTML += `<div id="gameId-${id}" class="box">
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
@@ -21,4 +21,3 @@ export function load() {
 	});
 }
 load();
-// console.log("trigerr");

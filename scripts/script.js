@@ -20,7 +20,7 @@ export const database = [
 	},
 ];
 
-// plust button
+// plus button
 function onClickPlusButton() {
 	const createSection = document.getElementsByClassName(
 		"create-form-section"
