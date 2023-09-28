@@ -1,4 +1,5 @@
 import { database } from "./script.js";
+import { settingOnClickCard } from "./detail-script.js";
 
 export function load() {
 	const container = document.getElementsByClassName("container")[0];
@@ -19,5 +20,7 @@ export function load() {
 				<h2>${name}</h2>
 			</div>`;
 	});
+
+	settingOnClickCard();
 }
 load();

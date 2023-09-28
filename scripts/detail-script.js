@@ -22,27 +22,30 @@ const closeBtn = document.getElementById("close-detail-btn");
 closeBtn.addEventListener("click", onClickCloseButton);
 
 // onclick card
-const cardGame = document.getElementsByClassName("box");
-if (cardGame.length) {
-	for (const card of cardGame) {
-		card.addEventListener("click", function () {
-			const detailGameSection = document.getElementsByClassName(
-				"game-detail-section"
-			)[0];
-			detailGameSection.style.display = "flex";
+export function settingOnClickCard() {
+	const cardGame = document.getElementsByClassName("box");
+	if (cardGame.length) {
+		for (const card of cardGame) {
+			card.addEventListener("click", function () {
+				const detailGameSection = document.getElementsByClassName(
+					"game-detail-section"
+				)[0];
+				detailGameSection.style.display = "flex";
 
-			const gameId = card.id;
-			const id = gameId[gameId.length - 1];
-			currentId = Number(id);
-			database.forEach((element) => {
-				if (element.id === currentId) {
-					gameData = element;
-				}
+				const gameId = card.id;
+				const id = gameId[gameId.length - 1];
+				currentId = Number(id);
+				database.forEach((element) => {
+					if (element.id === currentId) {
+						gameData = element;
+					}
+				});
+				loadData();
 			});
-			loadData();
-		});
+		}
 	}
 }
+settingOnClickCard();
 
 // load one data
 function loadData() {
