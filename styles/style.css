@@ -28,6 +28,7 @@ header {
 
 .header-right {
 	justify-content: right;
+	font-size: 40px;
 }
 
 .add-btn {
