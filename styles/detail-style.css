@@ -1,0 +1,92 @@
+.game-detail-section {
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: none;
+}
+
+.game-detail {
+	width: 100%;
+	height: 100vh;
+	color: white;
+	background-image: url("/assets/fortnite-img.jpg");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.game-name {
+	font-size: 60px;
+	margin: 20px;
+}
+.info-section {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba(148, 148, 148, 0.7);
+	margin-bottom: 50px;
+}
+
+.install-btn {
+	margin: 10px;
+	margin-left: 50px;
+	color: white;
+	text-decoration: none;
+	background: rgb(68, 175, 30);
+	background: linear-gradient(
+		90deg,
+		rgba(68, 175, 30, 1) 0%,
+		rgba(10, 164, 112, 1) 100%
+	);
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.play-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+	/* background-color: red; */
+	margin: 20px;
+	line-height: 10px;
+}
+
+.input-time {
+	width: 150px;
+	margin: 20px;
+	translate: 0 15%;
+}
+
+.progress-time {
+	width: 30%;
+	margin: 20px;
+}
+
+#close-detail-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	padding: 10px 15px;
+	color: white;
+	background-color: rgba(255, 0, 0, 0.5);
+	border: 2px solid white;
+	margin: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}

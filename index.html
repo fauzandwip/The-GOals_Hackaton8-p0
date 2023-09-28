@@ -4,6 +4,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>The GOals</title>
+		<!-- fonts google -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- css style -->
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/create-style.css" />
+		<link rel="stylesheet" href="/styles/detail-style.css" />
 		<!-- boostrap css -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,7 +24,167 @@
 		/>
 	</head>
 	<body>
-		<h1>Hello, world!</h1>
+		<!-- header -->
+		<header>
+			<div class="header-left">
+				<p class="welcome">Welcome to The GOals</p>
+			</div>
+
+			<!-- add button -->
+			<div class="header-right">
+				<i class="fa-solid fa-circle-plus"></i>
+			</div>
+		</header>
+
+		<!-- title -->
+		<h1>CHOOSE YOUR GAME AND PLAY NOW!</h1>
+		<div class="container"></div>
+
+		<!-- CREATE FROM SECTION -->
+		<div class="create-form-section">
+			<div class="create-section">
+				<!-- image form -->
+				<div class="form-img"></div>
+
+				<!-- form -->
+				<div class="form-section">
+					<!-- form section -->
+					<form id="form-create" onsubmit="return false">
+						<h1>Add Your Game</h1>
+						<div class="form-floating">
+							<input
+								type="text"
+								class="form-control"
+								id="gameName"
+								placeholder="Game Name"
+								required
+							/>
+							<label for="gameName">Game Name</label>
+						</div>
+
+						<select class="form-select" aria-label="Default select example">
+							<option value="mobile">Mobile</option>
+							<option value="pc">PC</option>
+						</select>
+
+						<div class="form-floating">
+							<input
+								type="text"
+								class="form-control"
+								id="targetTime"
+								placeholder="text"
+								required
+							/>
+							<label for="targetTime">Target Play Time (hour)</label>
+						</div>
+
+						<!-- Image -->
+						<div class="mb-3" style="color: white">
+							<label for="formFile" class="form-label">Image</label>
+							<input class="form-control" type="file" id="formFile" required />
+						</div>
+
+						<!-- optional -->
+						<p style="color: white">Optional</p>
+						<div class="form-floating">
+							<input
+								type="text"
+								class="form-control"
+								id="linkGame"
+								placeholder="linkGame"
+								required
+							/>
+							<label for="linkGame">Link Game</label>
+						</div>
+
+						<!-- button -->
+						<button id="submit-form" type="submit" class="btn btn-primary">
+							Submit
+						</button>
+					</form>
+				</div>
+
+				<!-- cancel button -->
+				<button class="cancel-btn">
+					<i class="fa-solid fa-xmark" style="font-size: 20px"></i>
+				</button>
+			</div>
+		</div>
+
+		<!-- GAME DETAIL -->
+		<div class="game-detail-section">
+			<div class="game-detail">
+				<div class="game-name">
+					<div id="name-detail">Fortnite</div>
+				</div>
+
+				<div class="info-section">
+					<!-- install button -->
+					<div>
+						<a
+							class="install-btn"
+							href="https://www.fortnite.com/"
+							target="_blank"
+						>
+							INSTALL
+						</a>
+					</div>
+
+					<!-- target time -->
+					<div class="play-info">
+						<h5>TARGET TIME</h5>
+						<p id="detail-target">33 hours</p>
+					</div>
+
+					<!-- play time -->
+					<div class="play-info">
+						<h5>PLAY TIME</h5>
+						<p id="detail-play">22 hours</p>
+					</div>
+
+					<!-- input time -->
+					<div class="input-time">
+						<div class="input-group mb-3">
+							<input
+								id="input-hour"
+								type="text"
+								class="form-control"
+								placeholder="hour"
+								aria-label="Recipient's username"
+								aria-describedby="button-addon2"
+							/>
+							<button class="btn btn-outline-info" type="button" id="input-btn">
+								Add
+							</button>
+						</div>
+					</div>
+
+					<!-- progress bar -->
+					<div class="progress-time">
+						<div
+							id="detail-progress"
+							class="progress"
+							role="progressbar"
+							aria-label="Info example"
+							aria-valuenow="50"
+							aria-valuemin="0"
+							aria-valuemax="100"
+						>
+							<div
+								id="detail-progress-style"
+								class="progress-bar bg-info"
+								style="width: 50%"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- cancel button -->
+			<button id="close-detail-btn">
+				<i class="fa-solid fa-xmark" style="font-size: 20px"></i>
+			</button>
+		</div>
 		<!-- bootstrap javascript -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -25,5 +196,11 @@
 			src="https://kit.fontawesome.com/f845d28776.js"
 			crossorigin="anonymous"
 		></script>
+		<!-- script javascript -->
+		<script type="module" src="scripts/script.js"></script>
+		<script type="module" src="./scripts/read-script.js"></script>
+		<script type="module" src="./scripts/create-script.js"></script>
+		<script type="module" src="/scripts/detail-script.js"></script>
+		<script type="module" src="/scripts/delete-script.js"></script>
 	</body>
 </html>
