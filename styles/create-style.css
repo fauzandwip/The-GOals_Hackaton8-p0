@@ -1,6 +1,17 @@
+.create-form-section {
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	position: fixed;
+	display: none;
+	z-index: 2;
+	background-color: gray;
+}
+
 .create-section {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	background-image: url("/assets/fortnite-img.jpg");
 	background-size: cover;
@@ -36,7 +47,7 @@
 }
 
 .cancel-btn {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 100;

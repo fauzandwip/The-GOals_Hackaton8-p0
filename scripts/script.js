@@ -14,7 +14,18 @@ export const database = [
 		type: "mobile",
 		targetTime: 24,
 		reachTime: 12,
-		urlImage: "/assets/fortnite-img.jpg",
-		urlGame: "https://www.fortnite.com/",
+		urlImage: "/assets/mobile-legends.jpg",
+		urlGame:
+			"https://play.google.com/store/apps/details?id=com.mobile.legends&pcampaignid=web_share",
 	},
 ];
+
+// plust button
+function onClickPlusButton() {
+	const createSection = document.getElementsByClassName(
+		"create-form-section"
+	)[0];
+	createSection.style.display = "flex";
+}
+const plusBtn = document.getElementsByClassName("header-right")[0];
+plusBtn.addEventListener("click", onClickPlusButton);

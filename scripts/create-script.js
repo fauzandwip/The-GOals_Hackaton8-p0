@@ -1,4 +1,5 @@
 import { database } from "./script.js";
+import { load } from "./read-script.js";
 
 // image form
 const inputImage = document.getElementById("formFile");
@@ -18,7 +19,6 @@ inputImage.addEventListener("change", onFileUploaded);
 
 // submit/create data
 const formCreate = document.getElementById("form-create");
-const submitBtn = document.getElementById("submit-form");
 
 function add(event) {
 	console.log("first add");
@@ -42,5 +42,19 @@ function add(event) {
 	};
 
 	database.push(newData);
+	console.log(database);
+	load();
+	onClickExitBtn();
 }
 formCreate.addEventListener("submit", add);
+
+// cancel button
+function onClickExitBtn() {
+	const createFormSection = document.getElementsByClassName(
+		"create-form-section"
+	)[0];
+	createFormSection.style.display = "none";
+}
+const exitButton = document.getElementsByClassName("cancel-btn")[0];
+exitButton.addEventListener("click", onClickExitBtn);
+console.log(database);

@@ -1,8 +1,9 @@
 import { database } from "./script.js";
 
-function load() {
+export function load() {
 	const container = document.getElementsByClassName("container")[0];
 	console.log("trigerr load");
+	container.innerHTML = "";
 	database.forEach((element) => {
 		const { name, urlImage } = element;
 
