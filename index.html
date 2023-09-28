@@ -37,14 +37,31 @@
 		<div id="popup" class="popup">
 			<div class="popup-content">
 				<span class="close-popup" onclick="closePopup()">&times;</span>
-				<!-- Pop up -->
-				<table>
-					<!-- <li>Menyelesaikan kegiatan</li>
-					<li>Menangis</li> -->
+				<table id="editableTable">
+					<thead>
+						<tr>
+							<th colspan="5">Mission</th>
+							<!-- <th>Column 2</th> -->
+							<!-- Tambahkan kolom lain jika diperlukan -->
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Isi tabel -->
+						<!-- <tr>
+							<td>Value 1</td>
+							<td><button onclick="deleteRow(this)">Delete</button></td>
+						</tr>
+						<tr>
+							<td>Value 2</td>
+							<td><button onclick="deleteRow(this)">Delete</button></td>
+						</tr> -->
+						<!-- </tr> -->
+					</tbody>
 				</table>
-				<!-- <button onclick="closePopup()">Close</button> -->
+				<button onclick="addRow()">Add Row</button>
 			</div>
 		</div>
+		
 		
 
 		<!-- title -->
@@ -133,6 +150,20 @@
 				var popup = document.getElementById("popup");
 				popup.style.display = "none";
 			}
+			function addRow() {
+        var table = document.getElementById("editableTable").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+        var cell1 = newRow.insertCell(0);
+        // var cell2 = newRow.insertCell(1);
+        cell1.innerHTML = "<td><input type='text' value='Silahkan diisi'></td>";
+        var cell2 = newRow.insertCell(1)
+		cell2.innerHTML = "<td><button onclick='deleteRow(this)'>Delete</button></td>"
+		// cell2.innerHTML = "<input type='text' value='New Value 2'>";
+    }
+			function deleteRow(button) {
+        		var row = button.parentNode.parentNode; // Mendapatkan baris yang akan dihapus
+        		row.parentNode.removeChild(row); // Menghapus baris dari tabel
+    }
 		</script>
 		
 	</body>
