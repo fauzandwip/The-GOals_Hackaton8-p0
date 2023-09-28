@@ -34,6 +34,19 @@
 			</div>
 		</header>
 
+		<div id="popup" class="popup">
+			<div class="popup-content">
+				<span class="close-popup" onclick="closePopup()">&times;</span>
+				<!-- Pop up -->
+				<table>
+					<!-- <li>Menyelesaikan kegiatan</li>
+					<li>Menangis</li> -->
+				</table>
+				<!-- <button onclick="closePopup()">Close</button> -->
+			</div>
+		</div>
+		
+
 		<!-- title -->
 		<h1>CHOOSE YOUR GAME AND PLAY NOW!</h1>
 		<div class="container">
@@ -41,7 +54,7 @@
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
-						<button><img src="./assets/edit.png" /></button>
+						<button onclick="openPopup()"><img src="./assets/edit.png" /></button>
 						<button><img src="./assets/delete.png" /></button>
 					</div>
 				</div>
@@ -53,7 +66,7 @@
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
-						<button><img src="./assets/edit.png" /></button>
+						<button onclick="openPopup()"><img src="./assets/edit.png" /></button>
 						<button><img src="./assets/delete.png" /></button>
 					</div>
 				</div>
@@ -65,7 +78,7 @@
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
-						<button><img src="./assets/edit.png" /></button>
+						<button onclick="openPopup()"><img src="./assets/edit.png" /></button>
 						<button><img src="./assets/delete.png" /></button>
 					</div>
 				</div>
@@ -77,7 +90,7 @@
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
-						<button><img src="./assets/edit.png" /></button>
+						<button onclick="openPopup()"><img src="./assets/edit.png" /></button>
 						<button><img src="./assets/delete.png" /></button>
 					</div>
 				</div>
@@ -89,7 +102,7 @@
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
-						<button><img src="./assets/edit.png" /></button>
+						<button onclick="openPopup()"><img src="./assets/edit.png" /></button>
 						<button><img src="./assets/delete.png" /></button>
 					</div>
 				</div>
@@ -108,5 +121,19 @@
 			src="https://kit.fontawesome.com/f845d28776.js"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			// membuka pop-up
+			function openPopup() {
+				var popup = document.getElementById("popup");
+				popup.style.display = "block";
+			}
+		
+			// menutup pop-up
+			function closePopup() {
+				var popup = document.getElementById("popup");
+				popup.style.display = "none";
+			}
+		</script>
+		
 	</body>
 </html>
