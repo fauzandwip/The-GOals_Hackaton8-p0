@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bootstrap demo</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="styles/detail-style.css" />
+		<!-- font awesome -->
+		<script
+			src="https://kit.fontawesome.com/f845d28776.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<!-- main -->
+		<div class="game-detail">
+			<div class="game-name">
+				<div id="name-detail">Fortnite</div>
+			</div>
+
+			<div class="info-section">
+				<!-- install button -->
+				<div>
+					<a
+						class="install-btn"
+						href="https://www.fortnite.com/"
+						target="_blank"
+					>
+						INSTALL
+					</a>
+				</div>
+
+				<!-- target time -->
+				<div id="detail-target" class="play-info">
+					<h5>TARGET TIME</h5>
+					<p>33 hours</p>
+				</div>
+
+				<!-- play time -->
+				<div id="detail-play" class="play-info">
+					<h5>PLAY TIME</h5>
+					<p>22 hours</p>
+				</div>
+
+				<!-- input time -->
+				<div class="input-time">
+					<div class="input-group mb-3">
+						<input
+							id="input-hour"
+							type="text"
+							class="form-control"
+							placeholder="hour"
+							aria-label="Recipient's username"
+							aria-describedby="button-addon2"
+						/>
+						<button class="btn btn-outline-info" type="button" id="input-btn">
+							Add
+						</button>
+					</div>
+				</div>
+
+				<!-- progress bar -->
+				<div class="progress-time">
+					<div
+						id="detail-progress"
+						class="progress"
+						role="progressbar"
+						aria-label="Info example"
+						aria-valuenow="50"
+						aria-valuemin="0"
+						aria-valuemax="100"
+					>
+						<div
+							id="detail-progress-style"
+							class="progress-bar bg-info"
+							style="width: 50%"
+						></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- cancel button -->
+		<button class="cancel-btn">
+			<i class="fa-solid fa-xmark" style="font-size: 20px"></i>
+		</button>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<!-- detail script -->
+		<script type="module" src="/scripts/detail-script.js"></script>
+	</body>
+</html>
