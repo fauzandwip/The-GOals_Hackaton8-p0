@@ -2,4 +2,4 @@
 
 #### Theme: GAME
 
-# Kelompok 01 - The GOals
+## Kelompok 01 - The GOals
