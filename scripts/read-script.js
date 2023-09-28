@@ -1,5 +1,6 @@
 import { database } from "./script.js";
 import { settingOnClickCard } from "./detail-script.js";
+import { settingOnClickDelete } from "./delete-script.js";
 
 export function load() {
 	const container = document.getElementsByClassName("container")[0];
@@ -12,8 +13,7 @@ export function load() {
 				<div class="dots">
 					<button><img src="./assets/more.png" /></button>
 					<div>
-						<button><img src="./assets/edit.png" /></button>
-						<button><img src="./assets/delete.png" /></button>
+						<button id="delete-${id}" class="delete-btn"><img src="./assets/delete.png" /></button>
 					</div>
 				</div>
 				<img id="img-game" src="${urlImage}" />
@@ -22,5 +22,6 @@ export function load() {
 	});
 
 	settingOnClickCard();
+	settingOnClickDelete();
 }
 load();

@@ -12,11 +12,20 @@ export const database = [
 		id: 2,
 		name: "Mobile Legends",
 		type: "mobile",
-		targetTime: 24,
-		reachTime: 12,
+		targetTime: 41,
+		reachTime: 5,
 		urlImage: "/assets/mobile-legends.jpg",
 		urlGame:
 			"https://play.google.com/store/apps/details?id=com.mobile.legends&pcampaignid=web_share",
+	},
+	{
+		id: 3,
+		name: "Minecraft",
+		type: "pc",
+		targetTime: 34,
+		reachTime: 21,
+		urlImage: "/assets/minecraft.jpg",
+		urlGame: "https://www.minecraft.net/en-us/download",
 	},
 ];
 
