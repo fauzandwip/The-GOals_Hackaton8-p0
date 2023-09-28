@@ -5,7 +5,7 @@ export const database = [
 		type: "pc",
 		targetTime: 22,
 		reachTime: 10,
-		urlImage: "../assets/fortnite-img.jpg",
+		urlImage: "./assets/fortnite-img.jpg",
 		urlGame: "https://www.fortnite.com/",
 	},
 	{
@@ -14,7 +14,7 @@ export const database = [
 		type: "mobile",
 		targetTime: 41,
 		reachTime: 5,
-		urlImage: "../assets/mobile-legends.jpg",
+		urlImage: "/assets/mobile-legends.jpg",
 		urlGame:
 			"https://play.google.com/store/apps/details?id=com.mobile.legends&pcampaignid=web_share",
 	},
@@ -24,7 +24,7 @@ export const database = [
 		type: "pc",
 		targetTime: 34,
 		reachTime: 21,
-		urlImage: "../assets/minecraft.jpg",
+		urlImage: "assets/minecraft.jpg",
 		urlGame: "https://www.minecraft.net/en-us/download",
 	},
 ];
